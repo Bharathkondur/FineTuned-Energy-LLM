@@ -1,0 +1,18 @@
+# Energy AI - Dependencies
+# Install with: pip install -r requirements.txt
+
+# Core ML libraries
+torch>=2.0.0
+transformers>=4.40.0
+peft>=0.10.0
+accelerate>=0.27.0
+
+# Web interface
+streamlit>=1.30.0
+
+# Utilities
+numpy>=1.24.0
+tqdm>=4.65.0
+
+# Note: For RTX 40/50 series GPUs, install PyTorch nightly:
+# pip install --pre torch torchvision torchaudio --index-url https://download.pytorch.org/whl/nightly/cu128
