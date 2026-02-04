@@ -1,4 +1,4 @@
-# Energy AI - Petroleum Engineering Assistant
+Energy AI - Petroleum Engineering Assistant
 
 A fine-tuned AI assistant specialized in petroleum engineering, built with Qwen2.5-3B and LoRA fine-tuning.
 
@@ -7,73 +7,73 @@ A fine-tuned AI assistant specialized in petroleum engineering, built with Qwen2
 ![Streamlit](https://img.shields.io/badge/Streamlit-1.30+-red.svg)
 ![License](https://img.shields.io/badge/License-MIT-green.svg)
 
-## 🚀 Features
+  Features
 
-- **Fine-tuned LLM**: Qwen2.5-3B model fine-tuned on petroleum engineering data using LoRA
-- **Interactive Chat UI**: Beautiful Streamlit interface for Q&A
-- **Domain Expertise**: Specialized in drilling, reservoir engineering, production optimization
-- **Efficient Training**: Uses LoRA for memory-efficient fine-tuning on consumer GPUs (8GB VRAM)
+- Fine-tuned LLM: Qwen2.5-3B model fine-tuned on petroleum engineering data using LoRA
+- Interactive Chat UI: Beautiful Streamlit interface for Q&A
+- Domain Expertise: Specialized in drilling, reservoir engineering, production optimization
+- Efficient Training: Uses LoRA for memory-efficient fine-tuning on consumer GPUs (8GB VRAM)
 
-## 📁 Project Structure
+  Project Structure
 
 ```
 energy-ai/
-├── app.py                      # Streamlit GUI application
-├── finetune_llama.py           # Fine-tuning script with LoRA
-├── evaluate_model.py           # Model evaluation and testing
-├── energy_data_finetuning.jsonl # Training dataset (instruction format)
-├── energy_data_augmentation.py # Data augmentation utilities
-├── requirements.txt            # Python dependencies
-└── README.md                   # This file
+├── app.py                       Streamlit GUI application
+├── finetune_llama.py            Fine-tuning script with LoRA
+├── evaluate_model.py            Model evaluation and testing
+├── energy_data_finetuning.jsonl  Training dataset (instruction format)
+├── energy_data_augmentation.py  Data augmentation utilities
+├── requirements.txt             Python dependencies
+└── README.md                    This file
 ```
 
-## 🛠️ Installation
+ 🛠️ Installation
 
-### Prerequisites
+ Prerequisites
 
 - Python 3.10+
 - CUDA-capable GPU with 8GB+ VRAM
 - PyTorch with CUDA support
 
-### Setup
+ Setup
 
-1. **Clone the repository**
+1. Clone the repository
 ```bash
 git clone https://github.com/YOUR_USERNAME/energy-ai.git
 cd energy-ai
 ```
 
-2. **Create virtual environment**
+2. Create virtual environment
 ```bash
 python -m venv venv
-venv\Scripts\activate  # Windows
-# source venv/bin/activate  # Linux/Mac
+venv\Scripts\activate   Windows
+ source venv/bin/activate   Linux/Mac
 ```
 
-3. **Install dependencies**
+3. Install dependencies
 ```bash
 pip install -r requirements.txt
 ```
 
-4. **Install PyTorch with CUDA** (adjust for your CUDA version)
+4. Install PyTorch with CUDA (adjust for your CUDA version)
 ```bash
-# For CUDA 12.1
+ For CUDA 12.1
 pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
 
-# For newer GPUs (RTX 40/50 series), use nightly with CUDA 12.8
+ For newer GPUs (RTX 40/50 series), use nightly with CUDA 12.8
 pip install --pre torch torchvision torchaudio --index-url https://download.pytorch.org/whl/nightly/cu128
 ```
 
-## 🎯 Usage
+  Usage
 
-### Fine-tuning the Model
+ Fine-tuning the Model
 
-1. **Prepare your dataset** in JSONL format with chat messages:
+1. Prepare your dataset in JSONL format with chat messages:
 ```json
 {"messages": [{"role": "system", "content": "..."}, {"role": "user", "content": "..."}, {"role": "assistant", "content": "..."}]}
 ```
 
-2. **Run fine-tuning**:
+2. Run fine-tuning:
 ```bash
 python finetune_llama.py
 ```
@@ -84,7 +84,7 @@ The script will:
 - Train on your dataset
 - Save adapters to `./qwen25_energy_finetuned/`
 
-### Running the Chat Interface
+ Running the Chat Interface
 
 ```bash
 streamlit run app.py
@@ -92,7 +92,7 @@ streamlit run app.py
 
 Open http://localhost:8501 in your browser.
 
-### Evaluating the Model
+ Evaluating the Model
 
 ```bash
 python evaluate_model.py
@@ -100,9 +100,9 @@ python evaluate_model.py
 
 This runs predefined test questions and saves results to `evaluation_results.json`.
 
-## ⚙️ Configuration
+ ⚙️ Configuration
 
-### Fine-tuning Parameters (finetune_llama.py)
+ Fine-tuning Parameters (finetune_llama.py)
 
 | Parameter | Default | Description |
 |-----------|---------|-------------|
@@ -115,13 +115,13 @@ This runs predefined test questions and saves results to `evaluation_results.jso
 | `LEARNING_RATE` | 2e-4 | Learning rate |
 | `EPOCHS` | 1 | Number of training epochs |
 
-### App Settings (Sidebar)
+ App Settings (Sidebar)
 
-- **Max Response Length**: 128-512 tokens
-- **Temperature**: 0.1-1.0 (creativity level)
-- **System Prompt**: Customizable AI persona
+- Max Response Length: 128-512 tokens
+- Temperature: 0.1-1.0 (creativity level)
+- System Prompt: Customizable AI persona
 
-## 📊 Dataset Format
+  Dataset Format
 
 The training data should be in JSONL format with chat-style messages:
 
@@ -135,7 +135,7 @@ The training data should be in JSONL format with chat-style messages:
 }
 ```
 
-## 🔧 Hardware Requirements
+ 🔧 Hardware Requirements
 
 | Component | Minimum | Recommended |
 |-----------|---------|-------------|
@@ -143,29 +143,29 @@ The training data should be in JSONL format with chat-style messages:
 | RAM | 16 GB | 32 GB |
 | Storage | 20 GB | 50 GB |
 
-## 📈 Training Results
+  Training Results
 
 After fine-tuning, the model shows improved performance on petroleum engineering tasks:
 
-- ✅ Technical terminology understanding
-- ✅ Calculation explanations (Darcy equation, PI, etc.)
-- ✅ Drilling operations knowledge
-- ✅ Reservoir engineering concepts
+-  Technical terminology understanding
+-  Calculation explanations (Darcy equation, PI, etc.)
+-  Drilling operations knowledge
+-  Reservoir engineering concepts
 
-## 🤝 Contributing
+  Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
 
-## 📄 License
+License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🙏 Acknowledgments
+  Acknowledgments
 
 - [Qwen](https://github.com/QwenLM/Qwen) for the base model
 - [Hugging Face](https://huggingface.co) for transformers and PEFT
 - [Streamlit](https://streamlit.io) for the web framework
 
-## 📧 Contact
+  Contact
 
 For questions or feedback, please open an issue on GitHub.
