@@ -248,8 +248,6 @@ python training/finetune_llama.py
 streamlit run inference/app.py
 ```
 
-Open http://localhost:8501 in your browser.
-
  Running Comprehensive Evaluation
 
 ```bash
