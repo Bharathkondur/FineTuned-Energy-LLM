@@ -1,0 +1,10 @@
+energy-ai/
+├── comprehensive_evaluation_results.json  # ← NEW (just generated)
+├── evaluation_framework.py                # Evaluation code
+├── docs/
+│   ├── ARCHITECTURE.md                   # System architecture
+│   ├── DATASET.md                        # Dataset transparency
+│   ├── PERFORMANCE.md                    # Latency/cost analysis
+│   └── images/
+│       └── architecture_diagram.png      # Visual diagram
+└── README.md                             # Updated with all metrics
