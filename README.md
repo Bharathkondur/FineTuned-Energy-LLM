@@ -201,7 +201,7 @@ energy-ai/
 
 1. Clone the repository
 ```bash
-git clone https://github.com/YOUR_USERNAME/energy-ai.git
+git clone https://github.com/Bharathkondur/energy-ai.git
 cd energy-ai
 ```
 
