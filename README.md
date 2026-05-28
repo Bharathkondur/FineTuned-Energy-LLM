@@ -129,7 +129,7 @@ Environmental            ██████                     7%
 
 | Deployment | Monthly Cost (10K queries) |
 |------------|---------------------------|
-| Local GPU | ~$5 (electricity) |
+| Local GPU | ~$5 |
 | AWS g4dn.xlarge | ~$15 |
 | AWS g5.xlarge | ~$25 |
 
